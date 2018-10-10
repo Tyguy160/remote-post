@@ -19,7 +19,9 @@ class Letter extends Component {
 
   modules = {
     toolbar: [
-      [{ header: [1, 2, false] }],
+      [{ font: [] }],
+      [{ header: 1 }, { header: 2 }],
+      [{ script: "sub" }, { script: "super" }],
       ["bold", "italic", "underline", "strike"],
       [
         { list: "ordered" },
@@ -27,7 +29,8 @@ class Letter extends Component {
         { indent: "-1" },
         { indent: "+1" }
       ],
-      ["color"],
+      [{ align: [] }],
+      [{ color: [] }, { background: [] }],
       ["clean"]
     ]
   };
@@ -41,7 +44,9 @@ class Letter extends Component {
     "list",
     "bullet",
     "indent",
-    "color"
+    "background",
+    "color",
+    "script"
   ];
 
   render() {
